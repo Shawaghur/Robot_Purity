@@ -1,0 +1,109 @@
+:root{
+    --plane_color: rgb(236, 163, 163);
+    --plane_width: 100vw; 
+    --plane_height: 100vh;
+    --body_color: rgb(255,218,102); 
+}
+
+body{
+    background-color: aqua;
+    margin: 0;
+}
+.plane{
+    margin: auto;
+    background-color: var(--plane_color);
+    height: var(--plane_height);
+    width: var(--plane_width);
+    position: relative;
+    overflow: hidden;
+}
+
+.plane img{
+    height: var(--plane_height);
+    width: var(--plane_width);
+    object-fit: fill;
+}
+
+.bean-box{
+    position: absolute;
+    width: var(--plane_width);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    bottom: 0;
+}
+.bean-sq{
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    height: calc(0.7*var(--plane_height));
+    width: calc(0.6*var(--plane_height));
+    background-color: var(--body_color);
+    border-top: 100%;
+}
+
+.bean-cir{
+    position: absolute;
+    top: calc(-0.3*var(--plane_height));
+    height: calc(0.6*var(--plane_height));
+    width: calc(0.6*var(--plane_height));
+    border-radius: 100%;
+    background-color: var(--body_color);
+    z-index: 0;
+}
+
+.googles{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(0.4*var(--plane_height));
+    width: calc(0.4*var(--plane_height));
+    background-color: rgb(190,202,230);
+    border-radius: 100%;
+    z-index: 2;
+    margin: auto;
+    /* top: calc(-0.67*var(--plane_height)); */
+    
+}
+
+.strip{
+    position: relative;
+    top: calc(0.15*var(--plane_height));
+    height: calc(0.1*var(--plane_height));
+    width: calc(0.6*var(--plane_height));
+    background-color: rgb(43,50,73);
+    z-index: 1;
+}
+
+.eyeball{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 50%;
+    height: calc(0.35*var(--plane_height));
+    width: calc(0.35*var(--plane_height));
+    background-color: rgb(255, 255, 255);  
+    border-radius: 100%; 
+    z-index: 3;
+}
+
+.pupil{
+    position: absolute;
+    z-index: 4;
+}
+
+.pupil.normal{
+    height: calc(0.1*var(--plane_height));
+    width: calc(0.1*var(--plane_height));
+    background-color: black;
+    border-radius: 100%;
+}
+
+.pupil.star{
+    
+}

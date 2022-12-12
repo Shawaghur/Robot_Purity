@@ -1,0 +1,77 @@
+:root{
+    --eye_color: rgb(255, 255, 255);
+    --face_color: rgb(0, 0, 0);
+    --eyelid_color: rgb(0, 0, 0);
+    --face_w: 100vw;
+    --face_h: 100vh;
+    --eye_size: 20vmin;
+}
+
+.buttons {
+    position: relative;
+    z-index: 4;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+}
+
+.face{
+    background-color: var(--face_color);
+    margin: auto;
+    height: var(--face_h);
+    width: var(--face_w);
+    position: relative;
+    overflow: hidden;
+}
+
+.face div{
+    position: absolute;
+}
+
+.eye{
+    width: calc(var(--eye_size)*1.75);
+    height: var(--eye_size);
+    background: var(--eye_color);
+    border-radius: 50% ;
+    bottom: calc((var(--face_h)/2) - (var(--eye_size)/10));
+}
+
+.eye.left{
+    left: calc((var(--face_w)/7));
+}
+
+
+
+.eye.right{
+    right: calc((var(--face_w)/7)); 
+}
+
+.mouth{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: calc(var(--face_h)/3);
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.eyelid {
+    background-color: var(--eyelid_color);
+    height: var(--eye_size);
+    width: calc(var(--eye_size) * 1.75);
+    z-index: 2;
+}
+
+.eyelid.upper {
+    bottom: calc(var(--eye_size) * 1);
+}
+  
+.eyelid.lower {
+    border-radius: 100%;
+    bottom: calc(var(--eye_size) * -1);
+
+}
+
